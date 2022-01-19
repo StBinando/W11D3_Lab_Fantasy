@@ -48,4 +48,10 @@ public class KnightTest {
         assertEquals("Excalibur", knight.getSelectedWeapon().getName());
         assertEquals(1, knight.getNumberOfWeapons().size());
     }
+
+    @Test
+    public void canGetDamaged() {
+        knight.getDamaged(10);
+        assertEquals(90, knight.getHealthPoints());
+    }
 }

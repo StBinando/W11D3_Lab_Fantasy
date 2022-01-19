@@ -1,4 +1,10 @@
 package characters.mages;
 
-public class Wizard {
+import characters.Mage;
+import behaviours.IDefend;
+
+public class Wizard extends Mage {
+    public Wizard (int healthPoints, String name, IDefend defender) {
+        super(healthPoints, name, defender);
+    }
 }

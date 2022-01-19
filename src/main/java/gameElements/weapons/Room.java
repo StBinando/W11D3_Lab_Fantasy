@@ -16,7 +16,7 @@ public class Room {
         Random random = new Random();
         int numberOfExits = random.nextInt(3) + 1;
         for (int i = 0; i < numberOfExits; i++) {
-
+            int exitNo = random
         }
     }
 }
