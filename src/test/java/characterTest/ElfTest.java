@@ -1,5 +1,6 @@
 package characterTest;
 
+import characters.enemies.Troll;
 import characters.fighters.Elf;
 import gameElements.weapons.Sword;
 import org.junit.Before;
@@ -12,12 +13,14 @@ public class ElfTest {
     private Elf elf;
     private Sword sword1;
     private Sword sword2;
+    private Troll troll;
 
     @Before
     public void before() {
         sword1 = new Sword("Excalibur", 10);
         sword2 = new Sword("Barry", 1);
         elf = new Elf(100, "Simon");
+        troll = new Troll(15, 5);
     }
 
     @Test
@@ -47,5 +50,14 @@ public class ElfTest {
         elf.chooseWeapon(sword1.getName());
         assertEquals("Excalibur", elf.getSelectedWeapon().getName());
         assertEquals(1, elf.getNumberOfWeapons().size());
+    }
+
+    @Test
+    public void canAttack(){
+        elf.addWeapon(sword1);
+        elf.addWeapon(sword2);
+        elf.chooseWeapon(sword1.getName());
+        elf.attack(troll);
+        assertEquals(5, troll.getHealthPoints());
     }
 }

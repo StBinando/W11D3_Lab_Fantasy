@@ -21,4 +21,14 @@ public abstract class Player implements ITakeDamage {
         return this.healthPoints;
     }
 
+    protected void addHealthPoints(int additionalHealtPoints) {
+        this.healthPoints += additionalHealtPoints;
+        if (this.healthPoints > 100){
+            this.healthPoints = 100;
+        }
+    }
+
+    public void getDamaged(int points){
+        this.healthPoints -= points;
+    }
 }

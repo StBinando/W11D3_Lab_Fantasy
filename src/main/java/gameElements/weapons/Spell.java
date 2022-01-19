@@ -20,4 +20,5 @@ public abstract class Spell implements ISpell {
     public int getDamage() {
         return this.damage;
     }
+
 }

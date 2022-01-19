@@ -1,5 +1,5 @@
 package behaviours;
 
 public interface IDefend {
-    public String getName();
+    public int getDefenceMethod();
 }

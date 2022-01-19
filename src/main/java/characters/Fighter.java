@@ -1,10 +1,12 @@
 package characters;
 
+import behaviours.IAttack;
+import behaviours.ITakeDamage;
 import behaviours.IWeapon;
 
 import java.util.ArrayList;
 
-public abstract class Fighter extends Player {
+public abstract class Fighter extends Player implements ITakeDamage, IAttack {
     private ArrayList<IWeapon> weapons;
     private IWeapon selectedWeapon;
 
@@ -39,4 +41,9 @@ public abstract class Fighter extends Player {
     public ArrayList<IWeapon> getNumberOfWeapons() {
         return this.weapons;
     }
+
+    public void attack(ITakeDamage opponent){
+        opponent.getDamaged(this.getSelectedWeapon().getDamage());
+    }
+
 }

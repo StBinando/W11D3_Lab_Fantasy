@@ -1,18 +1,20 @@
 package characters;
 
-import behaviours.ISpell;
-import behaviours.IWeapon;
+import behaviours.*;
 
 import java.util.ArrayList;
 
-public abstract class Mage extends Player {
+public abstract class Mage extends Player implements ITakeDamage, IAttack {
     private ArrayList<ISpell> spells;
     private ISpell selectedSpell;
+    private IDefend defender;
+    private int totAttackValue;
 
-    public Mage(int healthPoints, String name) {
+    public Mage(int healthPoints, String name, IDefend _defender) {
         super(healthPoints, name);
         this.selectedSpell = null;
         this.spells = new ArrayList<>();
+        this.defender = _defender;
     }
 
     public void addSpell(ISpell _spell){
@@ -39,5 +41,11 @@ public abstract class Mage extends Player {
 
     public ArrayList<ISpell> getSpells() {
         return this.spells;
+    }
+
+    public void attack(ITakeDamage opponent){
+        this.totAttackValue = this.selectedSpell.getDamage();
+        this.totAttackValue += this.defender.getDefenceMethod();
+        opponent.getDamaged((this.totAttackValue));
     }
 }
