@@ -9,18 +9,27 @@ import java.util.Random;
 public class Room {
 
     private ArrayList<Directions> exits;
-    private static HashMap<Integer, Directions> intToExit;
-    intToExit.put(0, Directions.WEST);
-    intToExit.put(1, Directions.EAST);
-    intToExit.put(2, Directions.NORTH);
-    intToExit.put(3, Directions.SOUTH);
+    private static HashMap<Integer, Directions> intToExit = new HashMap<>();
 
 
     public Room() {
+        intToExit.put(0, Directions.WEST);
+        intToExit.put(1, Directions.EAST);
+        intToExit.put(2, Directions.NORTH);
+        intToExit.put(3, Directions.SOUTH);
+        exits = new ArrayList<>();
+
         Random random = new Random();
         int numberOfExits = random.nextInt(3) + 1;
-        for (int i = 0; i < numberOfExits; i++) {
-            int exitNo = random
+        while (exits.size() < numberOfExits) {
+            int exitNo = random.nextInt(3);
+            if (!(exits.contains(intToExit.get(exitNo)))) {
+                exits.add(intToExit.get(exitNo));
+            }
         }
+    }
+
+    public ArrayList<Directions> getExits() {
+        return this.exits;
     }
 }
