@@ -1,6 +1,7 @@
 package gameElemtsTest;
 
 import characters.enemies.Troll;
+import gameElements.weapons.Directions;
 import gameElements.weapons.Room;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +17,13 @@ public class RoomTest {
     @Before
     public void before(){
         room = new Room();
+    }
 
+    @Test
+    public void roomHasExits(){
+        assertTrue(room.getExits().size()>0);
+        for(Directions d : room.getExits()){
+            System.out.println(d);
+        }
     }
 }

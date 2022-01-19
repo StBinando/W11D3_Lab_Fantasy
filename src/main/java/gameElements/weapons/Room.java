@@ -2,6 +2,10 @@ package gameElements.weapons;
 
 import gameElements.weapons.Directions;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
+
 public class Room {
 
     private ArrayList<Directions> exits;
