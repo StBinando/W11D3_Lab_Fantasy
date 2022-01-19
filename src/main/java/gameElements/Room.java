@@ -1,6 +1,6 @@
-package gameElements.weapons;
+package gameElements;
 
-import gameElements.weapons.Directions;
+import gameElements.Directions;
 
 import java.util.ArrayList;
 import java.util.HashMap;

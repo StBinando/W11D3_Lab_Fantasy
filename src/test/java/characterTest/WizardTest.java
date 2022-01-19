@@ -3,9 +3,9 @@ package characterTest;
 import characters.mages.Wizard;
 import characters.defenders.Dragon;
 import behaviours.IDefend;
-import gameElements.weapons.Fireball;
-import gameElements.weapons.LightningStrike;
-import gameElements.weapons.Spell;
+import gameElements.spells.Fireball;
+import gameElements.spells.LightningStrike;
+import gameElements.Spell;
 import org.junit.Before;
 import org.junit.Test;
 

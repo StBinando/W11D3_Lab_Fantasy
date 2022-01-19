@@ -1,9 +1,9 @@
 package characterTest;
 
 import characters.mages.Warlock;
-import gameElements.weapons.Fireball;
-import gameElements.weapons.LightningStrike;
-import gameElements.weapons.Spell;
+import gameElements.spells.Fireball;
+import gameElements.spells.LightningStrike;
+import gameElements.Spell;
 import characters.defenders.Unicorn;
 import behaviours.IDefend;
 import org.junit.Before;

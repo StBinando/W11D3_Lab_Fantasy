@@ -1,8 +1,8 @@
 package gameElemtsTest;
 
 import characters.enemies.Troll;
-import gameElements.weapons.Directions;
-import gameElements.weapons.Room;
+import gameElements.Directions;
+import gameElements.Room;
 import org.junit.Before;
 import org.junit.Test;
 

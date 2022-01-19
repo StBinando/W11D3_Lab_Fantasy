@@ -1,4 +1,4 @@
-package gameElements.weapons;
+package gameElements;
 
 import behaviours.IWeapon;
 

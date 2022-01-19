@@ -1,4 +1,4 @@
-package gameElements.weapons;
+package gameElements;
 
 public enum Directions {
     EAST,

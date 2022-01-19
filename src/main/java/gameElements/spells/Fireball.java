@@ -1,6 +1,8 @@
-package gameElements.weapons;
+package gameElements.spells;
 
-public class Fireball extends Spell{
+import gameElements.Spell;
+
+public class Fireball extends Spell {
 
         public Fireball(String name, int damage) {
             super(name, damage);

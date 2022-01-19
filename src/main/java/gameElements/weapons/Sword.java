@@ -1,8 +1,8 @@
 package gameElements.weapons;
 
-import behaviours.IWeapon;
+import gameElements.Weapon;
 
-public class Sword extends Weapon{
+public class Sword extends Weapon {
 
     public Sword(String name, int damage) {
         super(name, damage);
